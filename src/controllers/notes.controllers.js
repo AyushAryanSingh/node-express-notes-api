@@ -1,23 +1,23 @@
 
 let notes = [];
 
-// function getNotes (req,res){
+function getNotes (req,res){
     
-//     res.json({
-//         requestTime:req.requestTime,
-//         notes
-//     });
+    res.json({
+        requestTime:req.requestTime,
+        notes
+    });
 
-//     // try{
-//     //     throw new error("something went wrong")
-//     // }catch(error){
-//     //     next(error);
-//     // }
-// }
-
-async function getNotes(req,res){
-    throw new Error("Testing async handler")
+    // try{
+    //     throw new error("something went wrong")
+    // }catch(error){
+    //     next(error);
+    // }
 }
+
+// async function getNotes(req,res){
+//     throw new Error("Testing async handler")
+// }
 
 function createNote(req,res){
     const note = req.body;

@@ -1,6 +1,6 @@
-
+const AppError = require("../errors/AppError")
 let notes = [];
-
+// GET /notes
 function getNotes (req,res){
     
     res.json({

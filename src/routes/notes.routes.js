@@ -6,9 +6,12 @@ const {
     getNotes,
     createNote,
     updateNote,
-    deleteNote
+    deleteNote,
+    getNotesById
 }= require("../controllers/notes.controllers")
 
+
+router.get("/:id",asyncHandler(getNotesById));
 router.get("/",asyncHandler(getNotes));
 router.post("/",fakeAuth,asyncHandler(createNote));
 router.put("/:id",fakeAuth,asyncHandler(updateNote));

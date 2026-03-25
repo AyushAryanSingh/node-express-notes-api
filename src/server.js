@@ -1,5 +1,15 @@
-const app = require("./app");
+require("dotenv").config();
 
-app.listen(3000,()=>{
-    console.log("server on");
-})
+const app = require("./app");
+const connectDB = require("./config/db");
+// console.log(process.env.MONGO_URI)
+const PORT = process.env.PORT || 3000;
+
+async function startServer() {
+  await connectDB();
+  app.listen(PORT, () => {
+    console.log("Server Running");
+  });
+}
+
+startServer();
